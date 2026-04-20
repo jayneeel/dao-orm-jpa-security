@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
-@Entity
-@AllArgsConstructor
-@Data
+//@Entity
+//@Data
 public class Student {
 }

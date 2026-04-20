@@ -1,6 +1,7 @@
 package com.example.spring_security.service;
 
 import com.example.spring_security.model.User;
+import com.example.spring_security.model.UserPrincipal;
 import com.example.spring_security.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,6 +26,6 @@ public class MyUserDetailsService implements UserDetailsService {
             System.out.println("User not found!");
             throw new UsernameNotFoundException("User 404!");
         }
-        return null;
+        return new UserPrincipal(user);
     }
 }
