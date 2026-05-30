@@ -1,5 +1,6 @@
 package com.example.spring_security.controller;
 
+import com.example.spring_security.config.JwtFilter;
 import com.example.spring_security.model.User;
 import com.example.spring_security.service.JwtService;
 import com.example.spring_security.service.UserService;
@@ -20,6 +21,9 @@ public class UserController {
 
     @Autowired
     AuthenticationManager authenticationManager;
+
+    @Autowired
+    JwtFilter jwtFilter;
 
     private BCryptPasswordEncoder encoder= new BCryptPasswordEncoder(12);
 
